@@ -1,0 +1,136 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "success": {
+      "$id": "/properties/success",
+      "type": "boolean",
+      "title": "The Success Schema ",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "data": {
+      "$id": "/properties/data",
+      "type": "object",
+      "properties": {
+        "merchantVOS": {
+          "$id": "/properties/data/properties/merchantVOS",
+          "type": "array",
+          "items": {
+            "$id": "/properties/data/properties/merchantVOS/items",
+            "type": "object",
+            "properties": {
+              "merchantId": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/merchantId",
+                "type": "integer",
+                "title": "The Merchantid Schema ",
+                "default": 0,
+                "examples": [
+                  139374
+                ]
+              },
+              "merchantName": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/merchantName",
+                "type": "integer",
+                "title": "The Merchantname Schema ",
+                "default": "",
+                "examples": [
+                  "聚情网吧"
+                ]
+              },
+              "contactName": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/contactName",
+                "type": "string",
+                "title": "The Contactname Schema ",
+                "default": "",
+                "examples": [
+                  "王女士"
+                ]
+              },
+              "contactMobile": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/contactMobile",
+                "type": "string",
+                "title": "The Contactmobile Schema ",
+                "default": "",
+                "examples": [
+                  "18057401577"
+                ]
+              },
+              "shopNum": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/shopNum",
+                "type": "integer",
+                "title": "The Shopnum Schema ",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "supportDivid": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/supportDivid",
+                "type": "boolean",
+                "title": "The Supportdivid Schema ",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "supportDividText": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/supportDividText",
+                "type": "string",
+                "title": "The Supportdividtext Schema ",
+                "default": "",
+                "examples": [
+                  "不参与分成"
+                ]
+              },
+              "createTime": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/createTime",
+                "type": "string",
+                "title": "The Createtime Schema ",
+                "default": "",
+                "examples": [
+                  "2017-11-09 16:26"
+                ]
+              },
+              "feeRate": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/feeRate",
+                "type": "integer",
+                "title": "The Feerate Schema ",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "dividInfoShow": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/dividInfoShow",
+                "type": "boolean",
+                "title": "The Dividinfoshow Schema ",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "shopIdList": {
+                "$id": "/properties/data/properties/merchantVOS/items/properties/shopIdList",
+                "type": "array"
+              }
+            }
+          }
+        },
+        "totalCount": {
+          "$id": "/properties/data/properties/totalCount",
+          "type": "integer",
+          "title": "The Totalcount Schema ",
+          "default": 0,
+          "examples": [
+            1051
+          ]
+        }
+      }
+    }
+  }
+}

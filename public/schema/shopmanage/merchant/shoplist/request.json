@@ -1,0 +1,7 @@
+[
+  {
+    "label": "商户ID",
+    "argument" : "merchantId",
+    "type": "number"
+  }
+]

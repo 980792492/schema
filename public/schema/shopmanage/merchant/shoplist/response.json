@@ -1,0 +1,208 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "success": {
+      "$id": "/properties/success",
+      "type": "boolean",
+      "title": "The Success Schema ",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "data": {
+      "$id": "/properties/data",
+      "type": "object",
+      "properties": {
+        "shopVOS": {
+          "$id": "/properties/data/properties/shopVOS",
+          "type": "array",
+          "items": {
+            "$id": "/properties/data/properties/shopVOS/items",
+            "type": "object",
+            "properties": {
+              "shopId": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/shopId",
+                "type": "integer",
+                "title": "The Shopid Schema ",
+                "default": 0,
+                "examples": [
+                  239317
+                ]
+              },
+              "shopName": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/shopName",
+                "type": "string",
+                "title": "The Shopname Schema ",
+                "default": "",
+                "examples": [
+                  "刘家香（延安路店）"
+                ]
+              },
+              "contactName": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/contactName",
+                "type": "string",
+                "title": "The Contactname Schema ",
+                "default": "",
+                "examples": [
+                  "殷店长"
+                ]
+              },
+              "contactMobile": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/contactMobile",
+                "type": "string",
+                "title": "The Contactmobile Schema ",
+                "default": "",
+                "examples": [
+                  "13757162917"
+                ]
+              },
+              "contractTime": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/contractTime",
+                "type": "string",
+                "title": "The Contracttime Schema ",
+                "default": "",
+                "examples": [
+                  "2018-05-10 17:17"
+                ]
+              },
+              "address": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/address",
+                "type": "string",
+                "title": "The Address Schema ",
+                "default": "",
+                "examples": [
+                  "百井坊巷121号"
+                ]
+              },
+              "shopType": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/shopType",
+                "type": "string",
+                "title": "The Shoptype Schema ",
+                "default": "",
+                "examples": [
+                  "美食-川菜"
+                ]
+              },
+              "status": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/status",
+                "type": "integer",
+                "title": "The Status Schema ",
+                "default": 0,
+                "examples": [
+                  "美食-川菜"
+                ]
+              },
+              "statusLabel": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/statusLabel",
+                "type": "string",
+                "title": "The Statuslabel Schema ",
+                "default": "",
+                "examples": [
+                  "安装完成"
+                ]
+              },
+              "sellerNick": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/sellerNick",
+                "type": "string",
+                "title": "The Sellernick Schema ",
+                "default": "",
+                "examples": [
+                  "含羞"
+                ]
+              },
+              "mallType": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/mallType",
+                "type": "integer",
+                "title": "The Malltype Schema ",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "mallTypeStr": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/mallTypeStr",
+                "type": "string",
+                "title": "The Malltypestr Schema ",
+                "default": "",
+                "examples": [
+                  "非商场门店"
+                ]
+              },
+              "offlineDeviceNum": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/offlineDeviceNum",
+                "type": "integer",
+                "title": "The Offlinedevicenum Schema ",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "onlineDeviceNum": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/onlineDeviceNum",
+                "type": "integer",
+                "title": "The Onlinedevicenum Schema ",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "isBind": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/isBind",
+                "type": "boolean",
+                "title": "The Isbind Schema ",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "ZJSBoxList": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/ZJSBoxList",
+                "type": "array"
+              },
+              "operateFlag": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/operateFlag",
+                "type": "boolean",
+                "title": "The Operateflag Schema ",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "onCheck": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/onCheck",
+                "type": "boolean",
+                "title": "The Oncheck Schema ",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "canSign": {
+                "$id": "/properties/data/properties/shopVOS/items/properties/canSign",
+                "type": "boolean",
+                "title": "The Cansign Schema ",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              }
+            }
+          }
+        },
+        "totalCount": {
+          "$id": "/properties/data/properties/totalCount",
+          "type": "integer",
+          "title": "The Totalcount Schema ",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        }
+      }
+    }
+  }
+}

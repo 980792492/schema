@@ -1,0 +1,42 @@
+[
+  {
+    "label": "商户名称",
+    "argument" : "merchantName",
+    "type": "string"
+  },
+  {
+    "label": "联系人",    
+    "argument": "contactName",
+    "type": "string"
+  },
+  {
+    "label": "联系人电话",
+    "argument": "contactMobile",
+    "type": "number"
+  },
+  {
+    "label": "是否分成",
+    "argument": "supportDivid",
+    "type": "number"
+  },
+  {
+    "label": "最低分成",
+    "argument": "downFeerate",
+    "type": "number"
+  },
+  {
+    "label": "最高分成",
+    "argument": "upFeerate",
+    "type": "number"
+  },
+  {
+    "label": "最早注册时间",
+    "argument": "registEndTime",
+    "type": "string"    
+  },
+  {
+    "label": "最晚注册时间",
+    "argument": "registStartTime",
+    "type": "string"    
+  }
+]

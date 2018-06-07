@@ -1,0 +1,42 @@
+{
+  "name": "schema",
+  "api": {
+    "name": "schema接口合集",
+    "version": 1,
+    "author": "qiye",
+    "apis": [
+      {
+        "name": "门店相关",
+        "version": 1,
+        "author": "qiye",
+        "apis": [
+          {
+            "name": "商户管理",
+            "version": 1,
+            "author": "qiye",
+            "apis": [
+              {
+                "name": "商户详情",
+                "version": 1,
+                "author": "qiye",
+                "value": "/leo/1.0/merchant/detail"
+              },
+              {
+                "name": "商户列表",
+                "version": 1,
+                "author": "qiye",
+                "value": "/leo/1.0/merchantManage/list"
+              },
+              {
+                "name": "商户门店列表",
+                "version": 1,
+                "author": "qiye",
+                "value": "/leo/1.0/merchant/shoplist"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

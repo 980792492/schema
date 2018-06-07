@@ -1,0 +1,148 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "success": {
+      "$id": "/properties/success",
+      "type": "boolean",
+      "title": "The Success Schema ",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "data": {
+      "$id": "/properties/data",
+      "type": "object",
+      "properties": {
+        "merchantId": {
+          "$id": "/properties/data/properties/merchantId",
+          "type": "integer",
+          "title": "The Merchantid Schema ",
+          "default": 0,
+          "examples": [
+            222262
+          ]
+        },
+        "merchantName": {
+          "$id": "/properties/data/properties/merchantName",
+          "type": "string",
+          "title": "The Merchantname Schema ",
+          "default": "",
+          "examples": [
+            "王三火锅烤肉"
+          ]
+        },
+        "contactName": {
+          "$id": "/properties/data/properties/contactName",
+          "type": "string",
+          "title": "The Contactname Schema ",
+          "default": "",
+          "examples": [
+            "柯世洪"
+          ]
+        },
+        "contactMobile": {
+          "$id": "/properties/data/properties/contactMobile",
+          "type": "string",
+          "title": "The Contactmobile Schema ",
+          "default": "",
+          "examples": [
+            "13634196600"
+          ]
+        },
+        "shopNum": {
+          "$id": "/properties/data/properties/shopNum",
+          "type": "integer",
+          "title": "The Shopnum Schema ",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "supportDivid": {
+          "$id": "/properties/data/properties/supportDivid",
+          "type": "boolean",
+          "title": "The Supportdivid Schema ",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "supportDividText": {
+          "$id": "/properties/data/properties/supportDividText",
+          "type": "string",
+          "title": "The Supportdividtext Schema ",
+          "default": "",
+          "examples": [
+            "不参与分成"
+          ]
+        },
+        "createTime": {
+          "$id": "/properties/data/properties/createTime",
+          "type": "string",
+          "title": "The Createtime Schema ",
+          "default": "",
+          "examples": [
+            "2018-05-14 15:43"
+          ]
+        },
+        "feeRate": {
+          "$id": "/properties/data/properties/feeRate",
+          "type": "integer",
+          "title": "The Feerate Schema ",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "dividInfoShow": {
+          "$id": "/properties/data/properties/dividInfoShow",
+          "type": "boolean",
+          "title": "The Dividinfoshow Schema ",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "subjectType": {
+          "$id": "/properties/data/properties/subjectType",
+          "type": "string",
+          "title": "The Subjecttype Schema ",
+          "default": "",
+          "examples": [
+            "所有"
+          ]
+        },
+        "subjectName": {
+          "$id": "/properties/data/properties/subjectName",
+          "type": "string",
+          "title": "The Subjectname Schema ",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "authentType": {
+          "$id": "/properties/data/properties/authentType",
+          "type": "string",
+          "title": "The Authenttype Schema ",
+          "default": "",
+          "examples": [
+            "未认证"
+          ]
+        },
+        "accountDetailVOS": {
+          "$id": "/properties/data/properties/accountDetailVOS",
+          "type": "array"
+        },
+        "shopIdList": {
+          "$id": "/properties/data/properties/shopIdList",
+          "type": "array"
+        }
+      }
+    }
+  }
+}
