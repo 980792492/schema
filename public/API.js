@@ -4,7 +4,7 @@ let API =[
       "request": "/schema/shopmanage/merchant/detail/request.json",
       "response": "/schema/shopmanage/merchant/detail/response.json"
     },
-    "key": "/leo/1.0/merchant/detail"
+    "key": "/leo/1.0/merchantManage/detail"
   },
   {
     "value": {

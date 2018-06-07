@@ -19,7 +19,7 @@
                 "name": "商户详情",
                 "version": 1,
                 "author": "qiye",
-                "value": "/leo/1.0/merchant/detail"
+                "value": "/leo/1.0/merchantManage/detail"
               },
               {
                 "name": "商户列表",
