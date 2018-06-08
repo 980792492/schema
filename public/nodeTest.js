@@ -1,12 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 
-
 const { readFileSync, readdirSync, writeFileSync } = fs
 const DIR = path.resolve(__dirname, './schema')
 const OUT = path.resolve(__dirname, './result.json')
-const LIST = path.resolve(__dirname, './API.js')
-
+const LIST = path.resolve(__dirname, '../src/utils/API.js')
 
 let result = {name: 'schema'}
 let API = []
@@ -33,7 +31,6 @@ function read (dir) {
   return out
 }
 
-
 let list = []
 function addApi (dir) {
   let files = readdirSync(dir)
@@ -45,7 +42,7 @@ function addApi (dir) {
       if (cur.indexOf('config') > -1) {
         var content = fs.readFileSync(cur, 'utf-8')
         if (JSON.parse(content).value) {
-          let newDir  = path.resolve(cur, '..')
+          let newDir = path.resolve(cur, '..')
           // console.log(newDir)
           let newfile = readdirSync(newDir)
           let argument = {}
@@ -53,7 +50,7 @@ function addApi (dir) {
           newfile.map((file, index) => {
             // console.log(file)
             if (file === 'config.json') {
-              let cur = path.resolve(dir, file)   
+              let cur = path.resolve(dir, file)
               argument.key = JSON.parse(fs.readFileSync(cur, 'utf-8')).value
             } else if (file === 'request.json') {
               let cur = path.resolve(dir, file)
@@ -76,4 +73,4 @@ result.api = read(DIR)
 addApi(DIR)
 
 writeFileSync(OUT, JSON.stringify(result, null, 2))
-writeFileSync(LIST,'let API =' + JSON.stringify(list, null, 2) + '\nexport default API')
+writeFileSync(LIST, 'let API =' + JSON.stringify(list, null, 2) + '\nexport default API')

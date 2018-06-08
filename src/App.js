@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Layout } from 'antd'
-import Menu from './components/common/menu'
-import Top from './components/common/Top/index'
+import Menu from 'components/menu'
+import Top from 'components/top'
 import Style from './App.less'
 
 import Schems from './schema'
 const { Header, Content } = Layout
 
-
 class App extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       requestApi: undefined
@@ -18,9 +17,9 @@ class App extends Component {
   componentWillMount () {
     Style.use()
   }
-  render() {
+  render () {
     return (
-      <div className="App clearfix">
+      <div className='App clearfix'>
         <div className='menu-wrapper'>
           <Menu
             changeApi={this.handleChangeApi.bind(this)}
@@ -37,15 +36,13 @@ class App extends Component {
           </Content>
         </Layout>
       </div>
-    );
+    )
   }
   handleChangeApi (api) {
     this.setState({
       requestApi: api
     })
   }
-
-
 }
 
-export default App;
+export default App

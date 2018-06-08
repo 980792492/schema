@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Layout, Button, Select, Cascader } from 'antd'
 import Style from './menu.less'
-import findIndex  from 'lodash/findIndex'
+import findIndex from 'lodash/findIndex'
 import fetch from 'isomorphic-fetch'
 
 const { Sider } = Layout
@@ -18,20 +18,20 @@ class Container extends Component {
   }
   componentDidMount () {
     fetch('./result.json' + '?data=' + encodeURIComponent(JSON.stringify({})))
-    .then( (res) => {
-      return res.json()
-    })
-    .then((result) => {
-      let obj = result.api
-      let newObj = {}
-      newObj.label = obj.name
-      newObj.value = obj.name
-      newObj.children = this.traverseAction(obj.apis)
-      let menuObj = newObj.children
-      this.setState({
-        menuObj
+      .then((res) => {
+        return res.json()
       })
-    })
+      .then((result) => {
+        let obj = result.api
+        let newObj = {}
+        newObj.label = obj.name
+        newObj.value = obj.name
+        newObj.children = this.traverseAction(obj.apis)
+        let menuObj = newObj.children
+        this.setState({
+          menuObj
+        })
+      })
   }
 
   traverseAction (argument) {
@@ -48,23 +48,22 @@ class Container extends Component {
     })
   }
 
-
   render () {
     if (!this.state.menuObj) {
-      return <Button shape="circle" loading />
+      return <Button shape='circle' loading />
     }
     return (
       <Sider>
         <div className='icon-wrap'>
-        <Cascader 
-          options={this.state.menuObj}
-          onChange={this.chooseApiAction.bind(this)}
-          placeholder="Please select" />
+          <Cascader
+            options={this.state.menuObj}
+            onChange={this.chooseApiAction.bind(this)}
+            placeholder='Please select' />
         </div>
       </Sider>
     )
   }
-  chooseApiAction (value) {   //  选择接口请求地址操作 
+  chooseApiAction (value) { //  选择接口请求地址操作
     let api = value[2]
     this.props.changeApi(api)
   }

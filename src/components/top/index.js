@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Avatar } from 'antd'
-import history from '../../../utils/history'
+import history from '../../utils/history'
 import Style from './index.less'
 class Top extends Component {
   constructor (props) {
@@ -8,7 +8,7 @@ class Top extends Component {
     this.state = {
 
     }
-  } 
+  }
   componentWillMount () {
     Style.use()
   }
@@ -16,7 +16,7 @@ class Top extends Component {
     return (
       <div className='header-top'>
         <a className='user-icon-wrapper'>
-          <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          <Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />
         </a>
       </div>
     )
