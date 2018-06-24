@@ -4,8 +4,12 @@ import Result from 'components/result'
 import fetch from 'isomorphic-fetch'
 import Style from './schems.less'
 import findIndex from 'lodash/findIndex'
-import API from './utils/API'
+import API from 'utils/API'
+import { TAB_CONF } from 'constants/index'
 import djv from 'djv'
+import { Button } from 'antd'
+import Raprequest from 'components/rap/Request'
+import Rapresponse from 'components/rap/Response'
 
 const env = djv({
   version: 'draft-04', // use json-schema draft-06
@@ -18,7 +22,7 @@ class SchemaComponent extends Component {
     super(props)
     this.state = {
       requestApi: undefined,
-      showTab: 1
+      showTab: '1'
     }
   }
 
@@ -29,16 +33,39 @@ class SchemaComponent extends Component {
   render () {
     return (
       <div className='schems-content-wrapper'>
-        {this.state.showTab === 1 && this.renderRAPJSX()}
-        {this.state.showTab === 2 && this.renderVerifyJSX()}
-        {this.state.showTab === 3 && this.renderOnlineJSX()}
-
+        <div className='tab-action-wrapper' >
+          {TAB_CONF.map((item, index) => (
+            <Button
+              onClick={this.changeTabActive.bind(this, item)}
+              className='button-item'
+              type={item.key === this.state.showTab ? 'primary' : ''
+              } key={index}>{item.value}</Button>
+          ))}
+        </div>
+        <div className='schema-content'>
+          {this.state.showTab === '1' && this.renderRAPJSX()}
+          {this.state.showTab === '2' && this.renderVerifyJSX()}
+          {this.state.showTab === '3' && this.renderOnlineJSX()}
+        </div>
       </div>
     )
   }
+  changeTabActive (item) {
+    const key = item.key
+    this.setState({
+      showTab: key
+    })
+  }
   renderRAPJSX () { //  rap
     return (
-      <div className='rap-wrapper'>1212</div>
+      <div className='rap-wrapper'>
+        <div> {`接口地址：${this.state.requestApi || '暂无'}`}</div>
+        <Raprequest
+          requestApi={this.state.requestApi}
+        />
+        <Rapresponse
+        />
+      </div>
     )
   }
 
@@ -94,7 +121,6 @@ class SchemaComponent extends Component {
         }
       })
       .then((resultJson) => {
-        console.log(resultJson)
         //  此处校验接口返回结果是否匹配jsonchema文件
         // console.log(resultJson)  //  json文件数据
         // console.log(result)      接口数据
